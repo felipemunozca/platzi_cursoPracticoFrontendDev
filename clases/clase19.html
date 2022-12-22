@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>Navbar: html</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+
+        /* nuevos estilos de la pagina. */
+        nav {
+            display: flex;
+            /* separar el menu de la pagina con el carro de compra, uno a cada lado. */
+            justify-content: space-between;
+            /* le quito el padding arriba y abajo, y le agrego uno de 24px a la izquierda y derecha. */
+            padding: 0 24px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .menu {
+            display: none;
+        }
+        .logo {
+            width: 100px;
+        }
+        .navbar-left {
+            display: flex;
+        }
+        /* espacio entre el logo y la lista del menu. */
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+        .navbar-left ul,
+        .navbar-right ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            /* cambio el orden de la lista, en vez de estar vertical lo paso a horizontal. */
+            display: flex;
+            /* alineo todos los contenidos al centro de la linea horizontal. */
+            align-items: center;
+            height: 60px;
+        }
+        /* quitar la linea bajo las palabras del menu, cambiar el color a uno de la lista. */
+        .navbar-left ul li a,
+        .navbar-right ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+            padding: 8px;
+            border-radius: 8px;
+        }
+        /* efecto al posicionar el mouse sobre alguno de los enlances del menu. */
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover {
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+        }
+        .navbar-email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-right: 12px;
+        }
+        .navbar-shopping-cart {
+            position: relative;
+        }
+        .navbar-shopping-cart div {
+            width: 16px;
+            height: 16px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            font-size: var(--sm);
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-back-index {
+            font-size: var(--md);
+            text-transform: uppercase;
+            font-weight: bold;
+            color: var(--white);
+            border-radius: 8px;
+            letter-spacing: 2px; 
+            background-color: var(--hospital-green);
+            padding: 14px 30px;
+            cursor: pointer;
+            position: fixed;
+            z-index: 99;
+            bottom: 30px;
+            right: 30px;
+            text-decoration: none;
+        }
+        .btn-back-index:hover {
+            background-color: green;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* media querys */
+        @media (max-width: 640px) {
+            .menu {
+                display: block;
+            }
+            .navbar-left ul {
+                display: none;
+            }
+            .navbar-email {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="../assets/icons/icon_menu.svg" class="menu" alt="menu">
+
+        <div class="navbar-left">
+            <img src="../assets/logos/logo_yard_sale.svg" class="logo" alt="logo">
+
+            <ul>
+                <li><a href="">All</a></li>
+                <li><a href="">Clothes</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Furnitures</a></li>
+                <li><a href="">Toys</a></li>
+                <li><a href="">Others</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">usuario@mail.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="../assets/icons/icon_shopping_cart.svg" alt="">
+                    <div>2</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <a href="../index.html" class="btn-back-index">Volver</a>
+    </div>
+</body>
+</html>

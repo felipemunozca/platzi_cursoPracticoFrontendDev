@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- agrego la fuente "Quicksand" desde google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>sistema de diseño, assets y variables.</title>
+    <style>
+        :root {
+            /* variables globales a las que podre acceder en cualquier momento. */
+            /* se escriben dentro de :root y se comienza con -- mas un nombre (no se pueden colocar nombres con espacios en blanco). */
+            /* en el caso de querer cambiar un color a futuro, solo cambio el que este declarado en la variable por uno nuevo. */
+            /* una buena practica seria, en vez de colocar el nombre del color como nombre de la variable, seria mejor que es
+            lo que va a afectar, un subtitulo, un boton, un background, etc. Porque si declaro el "light pink" pero el día de mañana
+            decido cambiar el color por un rojo fuerte, no tendra concordancia el nombre de la variable con el color asignado. */
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        /* declaro la fuente de google fonts que estara cargada en todo el body de index. */
+        body{
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        /* Se agrega un boton para poder volver a inicio y entrar a todos los ejemplos vistos en clases. */
+        .btn-back-index {
+            font-size: var(--md);
+            text-transform: uppercase;
+            font-weight: bold;
+            color: var(--white);
+            border-radius: 8px;
+            /* Espaciodo entre letras */
+            letter-spacing: 2px; 
+            background-color: var(--hospital-green);
+            padding: 14px 30px;
+            cursor: pointer;
+            /* fijar la posicion del boton desde abajo (99) hacia arriba, separandolo de la esquina derecha en 30px. */
+            position: fixed;
+            z-index: 99;
+            bottom: 30px;
+            right: 30px;
+            text-decoration: none;
+        }
+        /* efecto al posicionar el mouse sobre el boton, que cambie de color y aparesca una sombra. */
+        .btn-back-index:hover {
+            background-color: green;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <pre>prueba()</pre>
+    <p>prueba()</p>
+    <footer>
+        <a href="../index.html" class="btn-back-index">Volver</a>
+    </footer>
+</body>
+</html>

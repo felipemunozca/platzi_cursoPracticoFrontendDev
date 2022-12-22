@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+        }
+
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            position: absolute;
+            /* padding: 24px; */
+            background-color: #ACD9B2;
+            width: 25%;
+            /* height: 100vh; */
+        }
+        .menu h3 {
+            text-align: center;
+        }
+        .menu a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: bold;
+            padding-left: 24px;
+        }
+        .menu ul {
+            padding: 20px;
+            margin: 16px 0 0;
+            list-style: none;
+        }
+        .menu ul li {
+            margin-bottom: 16px;
+        }
+
+        .contenido {
+            position: relative;
+            max-width: 70%;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            padding-right: 30px;
+        }
+        .contenido h1 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .contenido p {
+            margin: 16px;
+            font-size: 16px;
+        }
+        .contenido li {
+            margin: 14px;
+        }
+        .separacion {
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+
+        /* media querys */
+        @media (max-width: 640px) {
+            .menu {
+                width: 35%;
+            }
+            .contenido {
+                width: 60%;
+                padding-right: 10px;
+            }
+            .contenido p {
+                margin: 12px;
+                font-size: 14px;
+            }
+            .contenido li {
+                margin: 12px;
+                font-size: 14px;
+                list-style: none;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="menu">
+        <h3>Ejercicios en Clases</h3>
+        <ul>
+            <li>Primeros pasos</li>
+            <li><a href="./clases/clase4.html">Clase 4</a></li>
+            <li>Inicio de sesion</li>
+            <li><a href="./clases/clase5.html">Clase 5</a></li>
+            <li><a href="./clases/clase6.html">Clase 6</a></li>
+            <li><a href="./clases/clase7.html">Clase 7</a></li>
+            <li><a href="./clases/clase8.html">Clase 8</a></li>
+            <li><a href="./clases/clase9.html">Clase 9</a></li>
+            <li><a href="./clases/clase10.html">Clase 10</a></li>
+            <li>Tarjetas de productos</li>
+            <li><a href="./clases/clase11.html">Clase 11</a></li>
+            <li><a href="./clases/clase12.html">Clase 12</a></li>
+            <li>Menus</li>
+            <li><a href="./clases/clase13.html">Clase 13</a></li>
+            <li><a href="./clases/clase14.html">Clase 14</a></li>
+            <li>Orden de compra</li>
+            <li><a href="./clases/clase15.html">Clase 15</a></li>
+            <li><a href="./clases/clase16.html">Clase 16</a></li>
+            <li><a href="./clases/clase17.html">Clase 17</a></li>
+            <li>Barra de navegacion</li>
+            <li><a href="./clases/clase18.html">Clase 18</a></li>
+            <li><a href="./clases/clase19.html">Clase 19</a></li>
+            <li>Detalle de producto</li>
+            <li><a href="./clases/clase20.html">Clase 20</a></li>
+            <li>Carrito de compra</li>
+            <li><a href="./clases/clase21.html">Clase 21</a></li>
+        </ul>
+    </aside>
+    <div class="contenido">
+        <h1>Curso Práctico de Desarrollo Frontend</h1>
+        <p>Ruta: HTML y CSS a profundidad</p>
+        <p>Profesora: Estefany Aguilar</p>
+        <p>Objetivo del curso: Aprender desarrollo frontend con responsive design, poniendo en práctica maquetación con HTML y CSS para construir diferentes ejemplos de páginas y componentes de un e-commerce profesional. Como utilizar variables de CSS para los colores, fuentes y tamaños de tu aplicación. Crear diferencias en la vista de la página dependiendo del tamaño del dispositivo, y finalmente, aprender a identificar las vistas y componentes como si fuera un desarrollo real en una empresa de tecnología.</p>
+        
+        <p class="separacion"></p>
+
+        <p>Algunos contenidos vistos:</p>
+        <ul>
+            <li>El uso de <strong>:root { }</strong> para crear variables que se utilizan en CSS.</li>
+            <li>Utilizar <strong>grid</strong> y <strong>grid-template-rows</strong> para crear tablas con asignaciones automaticas y fraccionadas.</li>
+            <li>Utilizar <strong>flex</strong> para colocar un elemento al lado del otro y <strong>flex-direction</strong> en forma de columnas para que se ordenen de arriba hacia abajo.</li>
+            <li>Crear media queries para dispositivos móviles (Cambiar la resolución a menos de <strong>640 pixeles</strong>  para verlo).</li>
+            <li>Utilizar <strong>gap</strong> para agregar espacio entre filas y columnas</li>
+            <li>Utilizar <strong>nth-child</strong> para heredar estilos CSS de padre a hijos.</li>
+            <li>Utilizar <strong>!important</strong> y cuando conviene hacerlo.</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
